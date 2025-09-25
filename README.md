@@ -1,0 +1,26 @@
+# Shipment Tracking System - External Event Notification System
+
+A microservices-based system for monitoring shipment status changes and emitting notifications via Kafka.
+
+## Architecture
+
+- **Tracking Service**: REST API for tracking shipments, integrates with external APIs, publishes events to Kafka
+- **Notification Service**: Consumes Kafka events and logs notifications
+- **Kafka**: Event streaming platform (KRaft mode - no Zookeeper)
+- **Prometheus**: Metrics collection
+- **Grafana**: Metrics visualization
+
+## Quick Start
+
+### Prerequisites
+- Docker & Docker Compose
+- Java 21
+- Maven 3.9.11
+
+### Running the System
+
+1. **Clone and build**:
+```bash
+git clone <repository>
+cd shipment-tracking-system
+mvn clean package
