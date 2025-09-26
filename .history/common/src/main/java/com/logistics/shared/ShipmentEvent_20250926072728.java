@@ -1,4 +1,3 @@
-package com.logistics.tracking_service.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -16,7 +15,6 @@ public record ShipmentEvent(
     
     String eventType
 ) {
-    // Compact constructor for default values and validation
     public ShipmentEvent {
         if (timestamp == null) {
             timestamp = LocalDateTime.now();
@@ -26,12 +24,10 @@ public record ShipmentEvent(
         }
     }
     
-    // Convenience constructor
     public ShipmentEvent(String trackingId, String oldStatus, String newStatus) {
         this(trackingId, oldStatus, newStatus, LocalDateTime.now(), "SHIPMENT_STATUS_CHANGED");
     }
     
-    // Static factory method
     public static ShipmentEvent of(String trackingId, String oldStatus, String newStatus) {
         return new ShipmentEvent(trackingId, oldStatus, newStatus);
     }

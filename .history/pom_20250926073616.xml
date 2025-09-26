@@ -27,11 +27,11 @@
 		<micrometer.version>1.14.1</micrometer.version>
 	</properties>
 	
-	<modules>
-		<module>common</module>
-		<module>tracking-service</module>
-		<module>notification-service</module>
-	</modules>	
+<modules>
+    <module>common</module>
+    <module>tracking-service</module>
+    <module>notification-service</module>
+</modules>
 	
 	<dependencyManagement>
 		<dependencies>

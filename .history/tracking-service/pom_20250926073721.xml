@@ -72,9 +72,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.logistics</groupId>
-			<artifactId>common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+        <groupId>com.logistics</groupId>
+        <artifactId>common</artifactId>
+        <version>1.0.0</version>
     	</dependency>
 	</dependencies>
 
