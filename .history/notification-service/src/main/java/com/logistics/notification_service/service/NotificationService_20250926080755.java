@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.logistics.notification_service.config.NotificationMetrics;
 
 @Service
-public class NotificationService {
+public class NotificationServNotificationServiceTestice {
     
     private static final Logger logger = LoggerFactory.getLogger(NotificationService.class);
     
@@ -61,7 +61,7 @@ public class NotificationService {
         logger.info("=== END NOTIFICATION ===");
     }
     
-    public String buildNotificationMessage(ShipmentEvent event) {
+    private String buildNotificationMessage(ShipmentEvent event) {
         StringBuilder message = new StringBuilder();
         
         message.append("Shipment tracking number: ").append(event.trackingId()).append("\n");

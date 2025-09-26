@@ -61,7 +61,7 @@ public class NotificationService {
         logger.info("=== END NOTIFICATION ===");
     }
     
-    public String buildNotificationMessage(ShipmentEvent event) {
+    String buildNotificationMessage(ShipmentEvent event) {
         StringBuilder message = new StringBuilder();
         
         message.append("Shipment tracking number: ").append(event.trackingId()).append("\n");
