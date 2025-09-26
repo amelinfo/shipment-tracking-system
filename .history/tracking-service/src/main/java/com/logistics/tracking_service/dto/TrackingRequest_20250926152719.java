@@ -1,6 +1,5 @@
 package com.logistics.tracking_service.dto;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 
 @Schema(description = "Request object for tracking a shipment")
@@ -21,6 +20,7 @@ public record TrackingRequest(
         }
     }
     
+    // Static factory method for convenience
     public static TrackingRequest of(String trackingId) {
         return new TrackingRequest(trackingId);
     }

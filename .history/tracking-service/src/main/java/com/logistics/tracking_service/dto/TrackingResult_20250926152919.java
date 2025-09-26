@@ -1,30 +1,13 @@
 package com.logistics.tracking_service.dto;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDateTime;
 
-@Schema(description = "Response object containing tracking result and status information")
 public record TrackingResult(
-    @Schema(description = "Tracking ID of the shipment", example = "ABC123XYZ")
     String trackingId,
-    
-    @Schema(
-        description = "Current status of the shipment",
-        example = "IN_TRANSIT",
-        allowableValues = {"CREATED", "PICKED_UP", "IN_TRANSIT", "OUT_FOR_DELIVERY", "DELIVERED", "EXCEPTION"}
-    )
     String currentStatus,
-    
-    @Schema(description = "Indicates if the status changed from previous check", example = "true")
     boolean statusChanged,
-    
-    @Schema(description = "Descriptive message about the tracking result", example = "Status changed from CREATED to IN_TRANSIT")
     String message,
-    
-    @Schema(description = "Indicates if the tracking request was processed successfully", example = "true")
     boolean success,
-    
-    @Schema(description = "Timestamp when the tracking was processed", example = "2024-01-15T10:30:00")
     LocalDateTime timestamp
 ) {
     

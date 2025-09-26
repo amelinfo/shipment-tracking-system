@@ -1,6 +1,5 @@
 package com.logistics.tracking_service.dto;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDateTime;
 
 @Schema(description = "Response object containing tracking result and status information")

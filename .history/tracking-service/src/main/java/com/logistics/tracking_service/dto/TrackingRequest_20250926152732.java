@@ -21,6 +21,7 @@ public record TrackingRequest(
         }
     }
     
+    // Static factory method for convenience
     public static TrackingRequest of(String trackingId) {
         return new TrackingRequest(trackingId);
     }

@@ -21,6 +21,7 @@ public record TrackingRequest(
         }
     }
     
+
     public static TrackingRequest of(String trackingId) {
         return new TrackingRequest(trackingId);
     }
